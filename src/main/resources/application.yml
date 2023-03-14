@@ -1,0 +1,18 @@
+server:
+  port: 8143
+  servlet:
+    context-path: /
+
+spring:
+  thymeleaf:
+    cache: false
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/wenyi_tools?useSSL=false&serverTimeZone=Asia/Shanghai
+    username: root
+    password: HWY12xyybz
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

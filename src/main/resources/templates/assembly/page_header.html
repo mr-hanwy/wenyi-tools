@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh_CN" xmlns:th="http://www.thymeleaf.org">
+  <body>
+    <div class="layui-header" th:fragment="Header">
+      <div class="layui-logo layui-hide-xs layui-bg-black">Wenyi Tools</div>
+      <ul class="layui-nav layui-layout-left">
+        <li class="layui-nav-item layui-show-xs-inline-block" lay-header-event="menuLeft">
+          <i class="layui-icon layui-icon-spread-left"></i>
+        </li>
+
+        <li class="layui-nav-item layui-hide-xs"><a href="javascript:">nav 1</a></li>
+        <li class="layui-nav-item layui-hide-xs"><a href="javascript:">nav 2</a></li>
+        <li class="layui-nav-item layui-hide-xs"><a href="javascript:">nav 3</a></li>
+        <li class="layui-nav-item">
+          <a href="javascript:">nav groups</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:">menu 11</a></dd>
+            <dd><a href="javascript:">menu 22</a></dd>
+            <dd><a href="javascript:">menu 33</a></dd>
+          </dl>
+        </li>
+      </ul>
+      <ul class="layui-nav layui-layout-right">
+        <li class="layui-nav-item layui-hide layui-show-md-inline-block">
+          <a href="javascript:">
+            <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" class="layui-nav-img" alt="">
+            admin
+          </a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:">个人信息</a></dd>
+            <dd><a href="javascript:">设置</a></dd>
+            <dd><a href="javascript:">退出</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
+          <a href="javascript:">
+            <i class="layui-icon layui-icon-more-vertical"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
