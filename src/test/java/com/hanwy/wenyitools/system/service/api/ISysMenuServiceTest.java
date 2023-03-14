@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -24,7 +25,7 @@ class ISysMenuServiceTest {
     }
 
     @Test
-    public void testAdd(){
+    public void testAdd() {
         SysMenuEntity entity = new SysMenuEntity();
         entity.setTitle("test2");
         entity.setUrl("http://localhost/test2");
@@ -32,7 +33,7 @@ class ISysMenuServiceTest {
     }
 
     @Test
-    public void testUpdate(){
+    public void testUpdate() {
         SysMenuEntity entity = new SysMenuEntity();
         entity.setId("2MmqXEX9CcN2Ek5xFbq3kYBxREq");
         entity.setTitle("test1");
@@ -41,7 +42,10 @@ class ISysMenuServiceTest {
     }
 
     @Test
-    public void testDelete(){
-        System.out.println(sysMenuService.removeById("2MmrBvYZynSJEdMU8NzW2bpCFKY"));
+    public void testDelete() {
+        List<String> ids = new ArrayList<>();
+        ids.add("2Mmqb51N4DZrebri4opjkoOumrh");
+        ids.add("2MmqXEX9CcN2Ek5xFbq3kYBxREq");
+        System.out.println(sysMenuService.removeBatchByIds(ids));
     }
 }
